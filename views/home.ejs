@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project</title>
+    <style>
+        body{
+            margin: 0px 0px;
+           background-image: url('image.jpg');
+        }
+        .heading{
+    color: chocolate;
+    text-shadow: 2px 2px chocolate;
+    text-decoration: underline overline dotted red;
+    margin: 0px 508px;       }
+        .container{ 
+            
+    margin: 14px 241px;
+    padding: 5px 5px;
+        }
+        .no3{ 
+    color: antiquewhite;
+    padding: 10px 81px;
+    font-size: 21px;
+        }
+        .no2{ 
+    background-color: #947dbd;
+        }
+        .no1{
+    background-color: #e6487e;
+        }
+        .text{
+            background-color: brown;
+        }
+        .out{
+         
+    padding: 6px 120px;
+    /* border: 2px solid red; */
+    text-align: center;
+    font-size: 23px;
+    color: black;
+    font-weight: bold;
+    /* text-decoration: none; */
+    text-decoration-line: overline;}
+    
+ 
+    </style>
+</head>
+<body>
+<!-- Just an image -->
+<!-- <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container">
+      <a href="#" class="navbar-brand d-flex align-items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+        <strong>Album</strong>
+      </a>
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </div> -->
+</br>
+<h1 class="heading">Our Trusted Cutomers</h1>
+</br>
+
+<div class="container">
+    <div>
+     <% if(user.length>0){ %>
+        <table border="4">
+            <tr class="no1">
+                
+                <!-- <th>index</th> -->
+               
+                <th>name</th>
+                <th>phone</th>
+                <th>mobile</th>
+                <!-- <th>balance</th> -->
+                <!-- <th>index</th> -->
+            </tr>
+            <% for(var i=0;i<user.length;i++){ %>
+                <tr class="no2">
+                    <!-- <td> <%= i %> </td> -->
+                    <!-- <td> <%= user[i].index %> </td> -->
+                
+                    <td class="no3">
+                    <a href="/user/<%= user[i]._id
+             %>">
+                        <%= user[i].name %>
+                    </a></td>
+                
+                      <!-- <td class="no3"> <%= user[i].name %> </td> -->
+                    <td class="no3"> <%=  user[i].phone %> </td>
+                    <td class="no3"> <%=  user[i].email %> </td>
+                    <!-- <td class="no3"> <%=  user[i].balance %> </td> -->
+                    
+                    <!-- <td> -->
+
+                    <!-- </td> -->
+                </tr>
+                <% } %>
+                <% } %>
+       
+            </table>
+    </div>
+</div>
+
+<div class="out" >
+    <a href="/history">Transaction History</a>
+</div>
+</body>
+</html>

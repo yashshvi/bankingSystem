@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .ram{
+        background-color: blue;
+    }
+    .kom{
+    padding: 20px 32px;
+    font-size: 19px;
+    background-color: #ff5722;}
+    .part{
+    padding: 17px 14px;
+    font-size: 18px;
+    background-color: #fde935; }
+    .text-center{
+        text-align: center;
+    }
+    .table{
+    padding: 22px 323px;
+    text-align: center;
+    align-items: center;
+    }
+    .kom1{
+        padding: 0px 0px;
+    }
+    .out{
+         
+         padding: 6px 120px;
+         /* border: 2px solid red; */
+         text-align: center;
+         font-size: 23px;
+         color: black;
+         font-weight: bold;
+         /* text-decoration: none; */
+         text-decoration-line: overline;}
+         
+</style>
+</head>
+<body>
+
+    <div class="container">
+        <h2 class="text-center">Transaction History</h2>
+        <table class="table">
+            <tbody class="ram">
+                <tr class="kom1">
+                    <td class="kom">
+                        Creditor Name
+                    </td>
+                    <td class="kom">
+                        Receiver Name
+                    </td>
+                    <td class="kom">
+                        Amount
+                    </td>
+                    <td class="kom">
+                        Transaction Time
+                    </td>
+                </tr>
+              <% history.forEach((history)=>{ %>
+                <tr>
+                    <td class="part">
+                        <%= history.Creditor %>
+                    </td>
+                    
+                    <td class="part">
+                        <%= history.Receipent %>
+                    </td>
+                    <td class="part">
+                        <%= history.Amount %>
+                    </td>
+                    <td class="part">
+                        <%= history.Time %>
+                    </td>
+                </tr>
+                 <% }) %>
+    
+    
+            </tbody>
+        </table>  
+        
+<div class="out" >
+    <a href="/home">Home</a>
+</div>  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

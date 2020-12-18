@@ -1,0 +1,94 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .text-center{
+    text-align: center;
+    color: red;
+    font-size: 31px;
+
+        }
+        .heading{
+    padding: 20px 31px;
+    font-size: 34px;
+    color: #881a1a;
+        }
+        .whole{
+    background-color: #f7dddb;
+        }
+        .container{
+    margin: auto;
+    width: 50%;
+    border: 3px solid #483c37;
+    /* padding: 10px; */
+    padding: 23px 30px;
+        }
+        .table-table-bordered{
+            padding: 0px 0px;
+        }
+        .para{
+    font-size: 28px;
+    padding: 0px 83px;
+        }
+        .row1{ 
+    text-align: center;
+    text-decoration: none;
+    padding: 11px 17px;
+    font-size: 20px;
+    color: royalblue;
+    font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="text-center">Customer details</h2>
+    <div class="container">
+        <table class="table-table-bordered">
+            <tbody class="whole">
+
+
+                <tr>
+                    <td class="heading">
+                        Customer Name
+                    </td>
+                    <td class="para">
+                        <%= user.name %>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="heading">
+                        Email
+                    </td>
+                    <td class="para">
+                        <%= user.email %>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="heading">
+                        Mobile Number
+                    </td>
+                    <td class="para">
+                        <%= user.phone %>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="heading">
+                        Balance
+                    </td>
+                    <td class="para">
+                        <%= user.balance %>
+                    </td>
+                </tr> 
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="row1">
+        <div class="col-6"><a href="/tran/<%= user._id %>">Transfer the amount</a></div>
+        <div class="col-6 col-lg-offset-2"><a href="/home">Home Page</a></div>
+    </div>
+</body>
+</html>

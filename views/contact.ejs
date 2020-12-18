@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body{
+    background-color: #f5eb95;
+    }
+.head{
+    text-align: center;
+    color: #0e0e10;
+    font-size: 40px;}
+.form{ 
+    text-align: center;
+    font-size: 34px;
+    color: red;
+}
+.sub{
+    font-size: 33px;
+}
+.in{
+    font-size: 17px;
+    padding: 0px 15px;
+    background-color: #e2b1a0;
+    cursor: pointer;
+    color: black;
+    border-radius: 23px;
+}
+.group{
+    color: white;
+}
+</style>
+</head>
+<body>
+    <h1 class="head">
+        Amount transfer page
+    </h1>
+    <form class="form" action="/tran/<%= current %> " method="POST">
+        <div class="row">
+            <div class="sub">
+              <label for="balance"> How Much Amount</label>
+            </div>
+             <div class="group">
+                 <input class="in" type="text" placeholder="Amount" name="balance" id="balance" required>
+             </div>
+        </div>
+        <div class="row">
+            <div class="sub">
+                <label for="balance">Receiver Name</label>
+            </div>
+            <div class="form" style="box-sizing: border-box;"><select name="name">
+                <option>-Select-</option>
+        <% user.forEach((user)=> { %>  
+        <option class="in" value="<%= user._id %>">
+                <%= user.name %>
+            </option>
+            <% }) %>
+        </select>
+                </div> 
+        </div>
+
+        <div class="but">
+            <button class="in">Submit</button>
+        </div>
+    </form>
+</body>
+</html>
